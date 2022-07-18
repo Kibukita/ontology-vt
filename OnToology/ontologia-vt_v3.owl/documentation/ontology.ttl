@@ -1,0 +1,1025 @@
+@prefix : <https://w3id.org/def/vt#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/def/vt#> .
+
+<https://w3id.org/def/vt> rdf:type owl:Ontology ;
+                           <http://purl.org/dc/elements/1.1/creator> "Esther Gómez Díaz" ;
+                           <http://purl.org/dc/elements/1.1/description> """El propósito principal de esta ontología es proporcionar un modelo de conocimiento consensuado en el dominio del alojamiento turístico que pueda
+ser usado por propietarios de alojamientos, gestores, representantes legales y administraciones públicas. Esta ontología se centra solo en el dominio del alojamiento turístico, campings, hoteles o apartahoteles poseen su propia normativa en la mayoría de las comunidades.""" ;
+                           <http://purl.org/dc/elements/1.1/title> "Solicitud de Licencia de Viviendas Uso Turístico" ;
+                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                           owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/2006/time#hasDuration
+<http://www.w3.org/2006/time#hasDuration> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf :dura ;
+                                          rdfs:domain owl:Thing ;
+                                          rdfs:range <http://www.w3.org/2006/time#Duration> ;
+                                          rdfs:label "time:hasDuration" .
+
+
+###  https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad> rdf:type owl:ObjectProperty ;
+                                                                                             owl:inverseOf :esPropietarioDe ;
+                                                                                             rdfs:domain :SerPropietario ;
+                                                                                             rdfs:range :ViviendaTurística ;
+                                                                                             rdfs:label "esObjetodePropiedad" .
+
+
+###  https://w3id.org/def/vtEsGestionadaPor
+<https://w3id.org/def/vtEsGestionadaPor> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf :esGestionadaPor ;
+                                         rdfs:domain <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+                                         rdfs:range <https://w3id.org/def/vtAdmónPública> ;
+                                         rdfs:label "gestiona" .
+
+
+###  https://w3id.org/def/vtsolicita
+<https://w3id.org/def/vtsolicita> rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf :esSolicitada ;
+                                  rdfs:domain :Persona ;
+                                  rdfs:range <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+                                  rdfs:label "solicita" .
+
+
+###  https://w3id.org/def/vttieneTipoDocumento
+<https://w3id.org/def/vttieneTipoDocumento> rdf:type owl:ObjectProperty ;
+                                            owl:inverseOf :perteneceA ;
+                                            rdfs:domain :DocumentoIdentificación ;
+                                            rdfs:range <https://w3id.org/def/vtTipoDocumento> ;
+                                            rdfs:label "tieneTipoDocumento" .
+
+
+###  https://w3id.org/def/v#esRealizadaMediante
+<https://w3id.org/def/v#esRealizadaMediante> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf :esMedioDe ;
+                                             rdfs:domain <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+                                             rdfs:range :Título ;
+                                             rdfs:label "tieneDeclaraciónResponsable" .
+
+
+###  https://w3id.org/def/v#esSolicitadaSobre
+<https://w3id.org/def/v#esSolicitadaSobre> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf :esObjetoDeSolicitud ;
+                                           rdfs:domain <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+                                           rdfs:range :ViviendaTurística ;
+                                           rdfs:label "esSolicitadaSobre" .
+
+
+###  https://w3id.org/def/v#explota
+<https://w3id.org/def/v#explota> rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf :esExplotador ;
+                                 rdfs:domain <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+                                 rdfs:range :Gestor ;
+                                 rdfs:label "explota" .
+
+
+###  https://w3id.org/def/v#notificaEn
+<https://w3id.org/def/v#notificaEn> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf :seIncluye ;
+                                    rdfs:domain :Título ;
+                                    rdfs:range :domicilioNotificaciones ;
+                                    rdfs:label "tieneDomicilioNotificaciones" .
+
+
+###  https://w3id.org/def/v#posee
+<https://w3id.org/def/v#posee> rdf:type owl:ObjectProperty ;
+                               owl:inverseOf :tienePropiedad ;
+                               rdfs:domain :SerPropietario ;
+                               rdfs:range :Propietario ;
+                               rdfs:label "posee" .
+
+
+###  https://w3id.org/def/vl#garantizadoPor
+<https://w3id.org/def/vl#garantizadoPor> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf :garantizaPropiedad ;
+                                         rdfs:domain :SerPropietario ;
+                                         rdfs:range :vtEscritura ;
+                                         rdfs:label "garantizadoPor" .
+
+
+###  https://w3id.org/def/vl#representaLegalmente
+<https://w3id.org/def/vl#representaLegalmente> rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf :esRepresentante ;
+                                               rdfs:domain :Representación ;
+                                               rdfs:range :RepresentanteLegal ;
+                                               rdfs:label "representaLegalmente" .
+
+
+###  https://w3id.org/def/vt#aplica
+:aplica rdf:type owl:ObjectProperty ;
+        owl:inverseOf :tieneNormativa ;
+        rdfs:domain :Normativa ;
+        rdfs:range <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+        rdfs:label "aplicaNormativa" .
+
+
+###  https://w3id.org/def/vt#dura
+:dura rdf:type owl:ObjectProperty ;
+      rdfs:domain <http://www.w3.org/2006/time#Duration> ;
+      rdfs:range owl:Thing ;
+      rdfs:label "dura" .
+
+
+###  https://w3id.org/def/vt#esExplotada
+:esExplotada rdf:type owl:ObjectProperty ;
+             owl:inverseOf :objetoExplotación ;
+             rdfs:domain :ViviendaTurística ;
+             rdfs:range <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+             rdfs:label "esExplotada" .
+
+
+###  https://w3id.org/def/vt#esExplotador
+:esExplotador rdf:type owl:ObjectProperty ;
+              rdfs:domain :Gestor ;
+              rdfs:range <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+              rdfs:label "esExplotador" .
+
+
+###  https://w3id.org/def/vt#esGestionadaPor
+:esGestionadaPor rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/def/vtAdmónPública> ;
+                 rdfs:range <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+                 rdfs:label "esGestionadaPor" .
+
+
+###  https://w3id.org/def/vt#esMedioDe
+:esMedioDe rdf:type owl:ObjectProperty ;
+           rdfs:domain :Título ;
+           rdfs:range <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+           rdfs:label "esMedioDe" .
+
+
+###  https://w3id.org/def/vt#esObjetoDeSolicitud
+:esObjetoDeSolicitud rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ViviendaTurística ;
+                     rdfs:range <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+                     rdfs:label "esObjetoDeSolicitud" .
+
+
+###  https://w3id.org/def/vt#esPropietarioDe
+:esPropietarioDe rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ViviendaTurística ;
+                 rdfs:range :SerPropietario ;
+                 rdfs:label "esPropiedadDe" .
+
+
+###  https://w3id.org/def/vt#esRepresentado
+:esRepresentado rdf:type owl:ObjectProperty ;
+                owl:inverseOf :solicitaRepresentación ;
+                rdfs:domain :Representación ;
+                rdfs:range :Persona ;
+                rdfs:label "esRepresentado" .
+
+
+###  https://w3id.org/def/vt#esRepresentante
+:esRepresentante rdf:type owl:ObjectProperty ;
+                 rdfs:domain :RepresentanteLegal ;
+                 rdfs:range :Representación ;
+                 rdfs:label "esRepresentante" .
+
+
+###  https://w3id.org/def/vt#esSolicitada
+:esSolicitada rdf:type owl:ObjectProperty ;
+              rdfs:domain <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+              rdfs:range :Persona ;
+              rdfs:label "esSolicitada" .
+
+
+###  https://w3id.org/def/vt#esSolicitante
+:esSolicitante rdf:type owl:ObjectProperty ;
+               owl:inverseOf :solicitaExplotación ;
+               rdfs:domain :Propietario ;
+               rdfs:range <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+               rdfs:label "esSolicitante" .
+
+
+###  https://w3id.org/def/vt#garantizaExplotación
+:garantizaExplotación rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :tieneTítuloExplotación ;
+                      rdfs:domain :DeclaraciónResponsable ;
+                      rdfs:range <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+                      rdfs:label "garantizaExplotación" .
+
+
+###  https://w3id.org/def/vt#garantizaPropiedad
+:garantizaPropiedad rdf:type owl:ObjectProperty ;
+                    rdfs:domain :vtEscritura ;
+                    rdfs:range :SerPropietario ;
+                    rdfs:label "garantizaPropiedad" .
+
+
+###  https://w3id.org/def/vt#garantizaRepresentación
+:garantizaRepresentación rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :tienePoderNotarial ;
+                         rdfs:domain :PoderNotarial ;
+                         rdfs:range :Representación ;
+                         rdfs:label "garantizaRepresentación" .
+
+
+###  https://w3id.org/def/vt#identifica
+:identifica rdf:type owl:ObjectProperty ;
+            owl:inverseOf :tieneDocumentoIdentificación ;
+            rdfs:domain :DocumentoIdentificación ;
+            rdfs:range :Persona ;
+            rdfs:label "identifica" .
+
+
+###  https://w3id.org/def/vt#objetoExplotación
+:objetoExplotación rdf:type owl:ObjectProperty ;
+                   rdfs:domain <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+                   rdfs:range :ViviendaTurística ;
+                   rdfs:label "objetoExplotación" .
+
+
+###  https://w3id.org/def/vt#perteneceA
+:perteneceA rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain <https://w3id.org/def/vtTipoDocumento> ;
+            rdfs:range :DocumentoIdentificación ;
+            rdfs:label "perteneceA" .
+
+
+###  https://w3id.org/def/vt#seIncluye
+:seIncluye rdf:type owl:ObjectProperty ;
+           rdfs:domain :domicilioNotificaciones ;
+           rdfs:range :Título ;
+           rdfs:label "seIncluye" .
+
+
+###  https://w3id.org/def/vt#seUbica
+:seUbica rdf:type owl:ObjectProperty ;
+         owl:inverseOf :tieneDirección ;
+         rdfs:domain <http://schema.org/address> ;
+         rdfs:range owl:Thing ;
+         rdfs:label "seUbica" .
+
+
+###  https://w3id.org/def/vt#solicitaExplotación
+:solicitaExplotación rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+                     rdfs:range :Propietario ;
+                     rdfs:label "solicitaExplotación" .
+
+
+###  https://w3id.org/def/vt#solicitaRepresentación
+:solicitaRepresentación rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Persona ;
+                        rdfs:range :Representación ;
+                        rdfs:label "solicitaRepresentación" .
+
+
+###  https://w3id.org/def/vt#tieneDirección
+:tieneDirección rdf:type owl:ObjectProperty ;
+                rdfs:domain owl:Thing ;
+                rdfs:range <http://schema.org/address> ;
+                rdfs:label "tieneDirección" .
+
+
+###  https://w3id.org/def/vt#tieneDocumentoIdentificación
+:tieneDocumentoIdentificación rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Persona ;
+                              rdfs:range :DocumentoIdentificación ;
+                              rdfs:label "tieneDocumentoIdentificación" .
+
+
+###  https://w3id.org/def/vt#tieneNormativa
+:tieneNormativa rdf:type owl:ObjectProperty ;
+                rdfs:domain <https://w3id.org/def/vtsolicitudArranqueActividad> ;
+                rdfs:range :Normativa ;
+                rdfs:label "tieneNormativa" .
+
+
+###  https://w3id.org/def/vt#tienePoderNotarial
+:tienePoderNotarial rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Representación ;
+                    rdfs:range :PoderNotarial ;
+                    rdfs:label "tienePoderNotarial" .
+
+
+###  https://w3id.org/def/vt#tienePropiedad
+:tienePropiedad rdf:type owl:ObjectProperty ;
+                rdfs:domain :Propietario ;
+                rdfs:range :SerPropietario ;
+                rdfs:label "tienePropiedad" .
+
+
+###  https://w3id.org/def/vt#tieneTítuloExplotación
+:tieneTítuloExplotación rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> ;
+                        rdfs:range :DeclaraciónResponsable ;
+                        rdfs:label "tieneTítuloExplotación" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/def/vtApellidos
+<https://w3id.org/def/vtApellidos> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :Persona ;
+                                   rdfs:range xsd:string ;
+                                   <http://purl.org/dc/elements/1.1/description> "Apellidos de la persona física." ;
+                                   rdfs:label "apellidos" .
+
+
+###  https://w3id.org/def/vtdocumento
+<https://w3id.org/def/vtdocumento> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :tieneDocumentoIdentificación ;
+                                                 owl:someValuesFrom :DocumentoIdentificación
+                                               ] ;
+                                   rdfs:range xsd:string ;
+                                   <http://purl.org/dc/elements/1.1/description> "Número del documento de identificación." ;
+                                   rdfs:label "númeroDocumento" .
+
+
+###  https://w3id.org/def/vtfax
+<https://w3id.org/def/vtfax> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Persona ;
+                             rdfs:range xsd:string ;
+                             <http://purl.org/dc/elements/1.1/description> "Número/s de fax de la persona física o jurídica." ;
+                             rdfs:label "fax" .
+
+
+###  https://w3id.org/def/vtmóvil
+<https://w3id.org/def/vtmóvil> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :Persona ;
+                               rdfs:range xsd:string ;
+                               <http://purl.org/dc/elements/1.1/description> "Número/s de móvil de contacto de la persona física o jurídica." ;
+                               rdfs:label "móvil" .
+
+
+###  https://w3id.org/def/vtnacionalidad
+<https://w3id.org/def/vtnacionalidad> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Persona ;
+                                      rdfs:range xsd:string ;
+                                      <http://purl.org/dc/elements/1.1/description> "Nacionalidad de la persona física." ;
+                                      rdfs:label "nacionalidad" .
+
+
+###  https://w3id.org/def/vtnombre
+<https://w3id.org/def/vtnombre> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :Persona ;
+                                rdfs:range xsd:string ;
+                                <http://purl.org/dc/elements/1.1/description> "Nombre de la persona física." ;
+                                rdfs:label "nombre" .
+
+
+###  https://w3id.org/def/vtrazónSocial
+<https://w3id.org/def/vtrazónSocial> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain :Persona ;
+                                     rdfs:range xsd:string ;
+                                     <http://purl.org/dc/elements/1.1/description> "Denominación Social en el caso de personas jurídicas." ;
+                                     rdfs:label "razón social" .
+
+
+###  https://w3id.org/def/vtteléfono
+<https://w3id.org/def/vtteléfono> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :Persona ;
+                                  rdfs:range xsd:string ;
+                                  <http://purl.org/dc/elements/1.1/description> "Teléfono/s de contacto de la persona física o jurídica." ;
+                                  rdfs:label "teléfono" .
+
+
+###  https://w3id.org/def/vt#CSV
+:CSV rdf:type owl:DatatypeProperty ;
+     rdfs:domain :PoderNotarial ;
+     rdfs:range xsd:string ;
+     <http://purl.org/dc/elements/1.1/description> """Código Seguro de Verificación que identifica el documento
+unívocamente.""" ;
+     rdfs:label "CSV" .
+
+
+###  https://w3id.org/def/vt#buzónElectrónico
+:buzónElectrónico rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :domicilioNotificaciones ;
+                  rdfs:range xsd:string ;
+                  <http://purl.org/dc/elements/1.1/description> """Buzón electrónico designado por el titular de la solicitud
+para recibir notificaciones.""" ;
+                  rdfs:label "buzónElectrónico" .
+
+
+###  https://w3id.org/def/vt#compañíaSeguros
+:compañíaSeguros rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ViviendaTurística ;
+                 rdfs:range xsd:string ;
+                 <http://purl.org/dc/elements/1.1/description> "Nombre de la compañía de seguros, si tiene poliza de seguros." ;
+                 rdfs:label "compañíaSeguros" .
+
+
+###  https://w3id.org/def/vt#denominación
+:denominación rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ViviendaTurística ;
+              rdfs:range xsd:string ;
+              <http://purl.org/dc/elements/1.1/description> "Nombre que recibe el establecimiento." ;
+              rdfs:label "denominación" .
+
+
+###  https://w3id.org/def/vt#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Persona ;
+       rdfs:range xsd:string ;
+       <http://purl.org/dc/elements/1.1/description> """Direccion/es de email de contacto de la persona física o
+jurídica.""" ;
+       rdfs:label "email" .
+
+
+###  https://w3id.org/def/vt#emailNotificaciones
+:emailNotificaciones rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :domicilioNotificaciones ;
+                     rdfs:range xsd:string ;
+                     <http://purl.org/dc/elements/1.1/description> """email indicado por el titular de la solicitud para recibir
+notificaciones.""" ;
+                     rdfs:label "emailNotificaciones" .
+
+
+###  https://w3id.org/def/vt#emailVivienda
+:emailVivienda rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ViviendaTurística ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/description> "Direccion/es de email de contacto de la vivienda." ;
+               rdfs:label "emailVivienda" .
+
+
+###  https://w3id.org/def/vt#faxVivienda
+:faxVivienda rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ViviendaTurística ;
+             rdfs:range xsd:string ;
+             <http://purl.org/dc/elements/1.1/description> "Número/s de fax de la persona física o vivienda." ;
+             rdfs:label "faxVivienda" .
+
+
+###  https://w3id.org/def/vt#fechaDeclaraciónResponsable
+:fechaDeclaraciónResponsable rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Título ;
+                             rdfs:range xsd:dateTime ;
+                             <http://purl.org/dc/elements/1.1/description> "Fecha de la firma de la declaración responsable" ;
+                             rdfs:label "fechaDeclaraciónResponsable" .
+
+
+###  https://w3id.org/def/vt#fechaPoderNotarial
+:fechaPoderNotarial rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PoderNotarial ;
+                    rdfs:range xsd:dateTime ;
+                    <http://purl.org/dc/elements/1.1/description> "Fecha de la firma del poder notarial" ;
+                    rdfs:label "fechaPoderNotarial" .
+
+
+###  https://w3id.org/def/vt#fechaPublicación
+:fechaPublicación rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Normativa ;
+                  rdfs:range xsd:dateTime ;
+                  <http://purl.org/dc/elements/1.1/description> "Fecha de publicación de la normativa." ;
+                  rdfs:label "fechaPublicación" .
+
+
+###  https://w3id.org/def/vt#fechaTítulo
+:fechaTítulo rdf:type owl:DatatypeProperty ;
+             rdfs:domain :DeclaraciónResponsable ;
+             rdfs:range xsd:dateTime ;
+             <http://purl.org/dc/elements/1.1/description> "Fecha de la firma del título." ;
+             rdfs:label "fechaTítulo" .
+
+
+###  https://w3id.org/def/vt#identificaciónTítulo
+:identificaciónTítulo rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :DeclaraciónResponsable ;
+                      rdfs:range xsd:string ;
+                      owl:propertyDisjointWith :tipoTítulo ;
+                      <http://purl.org/dc/elements/1.1/description> """Tipo de título, por ejemplo, contrato de compra-venta, contrato
+de servicios, etc.""" ;
+                      rdfs:label "identificaciónTítulo" .
+
+
+###  https://w3id.org/def/vt#idiomaNotificaciones
+:idiomaNotificaciones rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :domicilioNotificaciones ;
+                      rdfs:range xsd:string ;
+                      <http://purl.org/dc/elements/1.1/description> """idioma indicado por el titular de la solicitud para recibir
+notificaciones.""" ;
+                      rdfs:label "idiomaNotificaciones" .
+
+
+###  https://w3id.org/def/vt#motivo
+:motivo rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Título ;
+        rdfs:range xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> """Motivo de la declaración responsable, por ejemplo: Ïnicio
+de Actividad\".""" ;
+        rdfs:label "motivo" .
+
+
+###  https://w3id.org/def/vt#móvilVivienda
+:móvilVivienda rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ViviendaTurística ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/description> "Número/s de móvil de contacto de la vivienda." ;
+               rdfs:label "móvilVivienda" .
+
+
+###  https://w3id.org/def/vt#notaría
+:notaría rdf:type owl:DatatypeProperty ;
+         rdfs:domain :vtEscritura ;
+         rdfs:range xsd:string ;
+         <http://purl.org/dc/elements/1.1/description> "Notaría en la que ha sido firmada la escritura de propiedad." ;
+         rdfs:label "notaría" .
+
+
+###  https://w3id.org/def/vt#numProtocolo
+:numProtocolo rdf:type owl:DatatypeProperty ;
+              rdfs:domain :vtEscritura ;
+              rdfs:range xsd:string ;
+              <http://purl.org/dc/elements/1.1/description> "Número de registro para su identificación y localización." ;
+              rdfs:label "numProtocolo" .
+
+
+###  https://w3id.org/def/vt#polizaSeguros
+:polizaSeguros rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ViviendaTurística ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/description> "Número de la poliza, si tiene poliza de seguros." ;
+               rdfs:label "polizaSeguros" .
+
+
+###  https://w3id.org/def/vt#páginaWeb
+:páginaWeb rdf:type owl:DatatypeProperty ;
+           rdfs:domain :ViviendaTurística ;
+           rdfs:range xsd:string ;
+           <http://purl.org/dc/elements/1.1/description> "Página web de la vivienda, si la tiene." ;
+           rdfs:label "páginaWeb" .
+
+
+###  https://w3id.org/def/vt#referenciaCatastral
+:referenciaCatastral rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ViviendaTurística ;
+                     rdfs:range xsd:string ;
+                     <http://purl.org/dc/elements/1.1/description> "Identificador otorgado por el catastro que identifica unívocamente a una vivienda en el territorio español." ;
+                     rdfs:label "referenciaCatastral" .
+
+
+###  https://w3id.org/def/vt#telefonoVivienda
+:telefonoVivienda rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ViviendaTurística ;
+                  rdfs:range xsd:string ;
+                  <http://purl.org/dc/elements/1.1/description> "Teléfono/s de contacto de la vivienda." ;
+                  rdfs:label "teléfonoVivienda" .
+
+
+###  https://w3id.org/def/vt#teléfonoAsistencia
+:teléfonoAsistencia rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ViviendaTurística ;
+                    rdfs:range xsd:string ;
+                    <http://purl.org/dc/elements/1.1/description> "Teléfono utilizado para comunicar averías en la vivienda o solicitar algún servicio." ;
+                    rdfs:label "teléfonoAsistencia" .
+
+
+###  https://w3id.org/def/vt#tieneAguaCaliente
+:tieneAguaCaliente rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ViviendaTurística ;
+                   rdfs:range xsd:boolean ;
+                   <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene agua caliente." ;
+                   rdfs:label "tieneAguaCaliente" .
+
+
+###  https://w3id.org/def/vt#tieneAsistenciaYMantenimiento
+:tieneAsistenciaYMantenimiento rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :ViviendaTurística ;
+                               rdfs:range xsd:boolean ;
+                               <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene asistencia y mantenimiento." ;
+                               rdfs:label "tieneAsistenciaYMantenimiento" .
+
+
+###  https://w3id.org/def/vt#tieneCalefacción
+:tieneCalefacción rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ViviendaTurística ;
+                  rdfs:range xsd:boolean ;
+                  <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene calefacción." ;
+                  rdfs:label "tieneCalefacción" .
+
+
+###  https://w3id.org/def/vt#tieneEnergíaEléctrica
+:tieneEnergíaEléctrica rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ViviendaTurística ;
+                       rdfs:range xsd:boolean ;
+                       <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene energía eléctrica." ;
+                       rdfs:label "tieneEnergíaEléctrica" .
+
+
+###  https://w3id.org/def/vt#tipoTítulo
+:tipoTítulo rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DeclaraciónResponsable ;
+            rdfs:range xsd:string ;
+            <http://purl.org/dc/elements/1.1/description> """Tipo de título, por ejemplo, contrato de compra-venta, contrato
+de servicios, etc.""" ;
+            rdfs:label "tipoTítulo" .
+
+
+###  https://w3id.org/def/vt#títuloNormativa
+:títuloNormativa rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Normativa ;
+                 rdfs:range xsd:string ;
+                 <http://purl.org/dc/elements/1.1/description> "Título de la normativa." ;
+                 rdfs:label "títuloNormativa" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/address
+<http://schema.org/address> rdf:type owl:Class ;
+                            rdfs:subClassOf owl:Thing ;
+                            rdfs:label "schema:Address" .
+
+
+###  http://www.w3.org/2006/time#Duration
+<http://www.w3.org/2006/time#Duration> rdf:type owl:Class ;
+                                       <http://purl.org/dc/elements/1.1/description> "Clase Duration de la ontología Time (http://www.w3.org/2006/time)" ;
+                                       rdfs:label "time:Duration" .
+
+
+###  http://xmlns.com/foaf/spec/Agent
+<http://xmlns.com/foaf/spec/Agent> rdf:type owl:Class ;
+                                   rdfs:subClassOf owl:Thing ;
+                                   rdfs:label "foaf:Agent" .
+
+
+###  https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://schema.org/address> ;
+                                                                                         <http://purl.org/dc/elements/1.1/description> "Describe una dirección postal en España." ;
+                                                                                         rdfs:label "esdir:DirecciónPostal"^^rdfs:Literal .
+
+
+###  https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> rdf:type owl:Class ;
+                                                                                     <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre una vivienda turística, un propietario y un gesor." ;
+                                                                                     rdfs:label "Explotación" .
+
+
+###  https://w3id.org/def/vtAdmónPública
+<https://w3id.org/def/vtAdmónPública> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/def/vtnombre> ;
+                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onDataRange owl:rational
+                                                      ] ;
+                                      <http://purl.org/dc/elements/1.1/description> """Representa al órgano competente a cargo de velar por el
+cumplimiento de las normativas.""" ;
+                                      rdfs:label "AdmónPública" .
+
+
+###  https://w3id.org/def/vtTipoDocumento
+<https://w3id.org/def/vtTipoDocumento> rdf:type owl:Class ;
+                                       <http://purl.org/dc/elements/1.1/description> """Tipo de documento de identificación. En esta Ontología solo
+se han considerado los 3 tipos solicitados por las Comunidades
+Autónomas: DNI, NIF y NIE como instancias de la
+clase TipoDocumento""" ;
+                                       rdfs:label "TipoDocumento" .
+
+
+###  https://w3id.org/def/vtsolicitudArranqueActividad
+<https://w3id.org/def/vtsolicitudArranqueActividad> rdf:type owl:Class ;
+                                                    rdfs:label "SolicitudArranqueActividad" .
+
+
+###  https://w3id.org/def/vt#DeclaraciónResponsable
+:DeclaraciónResponsable rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty <http://www.w3.org/2006/time#hasDuration> ;
+                                          owl:allValuesFrom <http://www.w3.org/2006/time#Duration>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :fechaTítulo ;
+                                          owl:someValuesFrom owl:rational
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :identificaciónTítulo ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange owl:rational
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :tipoTítulo ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange owl:rational
+                                        ] ;
+                        <http://purl.org/dc/elements/1.1/description> """Documento firmado entre el Propietario y el Gestor que recoge
+los términos en los que el Gestor explotará la vivienda
+turística. Este documento tiene una validez temporal.""" ;
+                        rdfs:label "Título Explotación"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#DocumentoIdentificación
+:DocumentoIdentificación rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty <https://w3id.org/def/vtdocumento> ;
+                                           owl:someValuesFrom owl:rational
+                                         ] ;
+                         <http://purl.org/dc/elements/1.1/description> "Documento que acredita la identidad de una persona, ya sea física o jurídica." ;
+                         rdfs:label "DocumentoIdentificación" .
+
+
+###  https://w3id.org/def/vt#Gestor
+:Gestor rdf:type owl:Class ;
+        rdfs:subClassOf :Persona ;
+        <http://purl.org/dc/elements/1.1/description> """Representa al sujeto (persona física o jurídica) que explota
+comercialmente la vivienda. Propietario y Gestor firman
+un contrato de servicios que recoge los términos de su relación.""" ;
+        rdfs:label "Gestor"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#Normativa
+:Normativa rdf:type owl:Class ;
+           <http://purl.org/dc/elements/1.1/description> """Representa cada uno de los documentos legales redactados
+por la Administración Pública que recogen los requisitos
+a cumplir por las viviendas turísticas para poder iniciar
+actividad comercial sobre ellas.""" ;
+           rdfs:label "Normativa" .
+
+
+###  https://w3id.org/def/vt#Persona
+:Persona rdf:type owl:Class ;
+         rdfs:subClassOf <http://xmlns.com/foaf/spec/Agent> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :tieneDirección ;
+                           owl:allValuesFrom <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/vtteléfono> ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :email ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/vtfax> ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/vtmóvil> ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/vtnacionalidad> ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/vtApellidos> ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/vtnombre> ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/vtrazónSocial> ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
+         <http://purl.org/dc/elements/1.1/description> """Esta clase puede actuar con diferentes roles: Propietario,
+Gestor o Representante Legal y todos ellos pueden solicitar
+el arranque o inicio de actividad paara la vivienda.""" ;
+         rdfs:label "Persona" .
+
+
+###  https://w3id.org/def/vt#PoderNotarial
+:PoderNotarial rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2006/time#hasDuration> ;
+                                 owl:allValuesFrom <http://www.w3.org/2006/time#Duration>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :CSV ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange owl:rational
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :fechaTítulo ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange owl:rational
+                               ] ;
+               <http://purl.org/dc/elements/1.1/description> """Documento firmado entre el Propietario o Gestor y su Representante
+Legal ante notario y que avala la facultad del
+Representante para actuar en nombre del Representado.
+Este documento tiene una validez temporal.""" ;
+               rdfs:label "PoderNotarial"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#Propietario
+:Propietario rdf:type owl:Class ;
+             rdfs:subClassOf :Persona ;
+             <http://purl.org/dc/elements/1.1/description> """Representa al sujeto (persona física o jurídica) que posee
+la vivienda.""" ;
+             rdfs:label "Propietario" .
+
+
+###  https://w3id.org/def/vt#Representación
+:Representación rdf:type owl:Class ;
+                <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre un representante Legal y su representado, el propietario de una vivienda." ;
+                rdfs:label "Representación"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#RepresentanteLegal
+:RepresentanteLegal rdf:type owl:Class ;
+                    rdfs:subClassOf :Persona ;
+                    <http://purl.org/dc/elements/1.1/description> """Representa al sujeto (persona física o jurídica) que representa
+al propietario o gestor y actúa en su nombre ante la
+Administración Pública. Debe existir un poder notarial que
+permita al representante actuar en nombre del representado.""" ;
+                    rdfs:label "RepresentanteLegal" .
+
+
+###  https://w3id.org/def/vt#SerPropietario
+:SerPropietario rdf:type owl:Class ;
+                <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre una Vivienda Tur´sitica y su propietario." ;
+                rdfs:label "SerPropietario"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#Título
+:Título rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty <https://w3id.org/def/v#notificaEn> ;
+                          owl:someValuesFrom :domicilioNotificaciones
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :motivo ;
+                          owl:someValuesFrom owl:rational
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :fechaTítulo ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange owl:rational
+                        ] ;
+        <http://purl.org/dc/elements/1.1/description> """Representa el documento firmado por el Propietario, Gestor
+o Representante Legal utilizado para solicitar el inicio
+de actividad sobre la vivienda. El solicitante se compromete
+de forma responsable a cumplir los requisitos de la
+misma recogidos en las normativas asociadas.""" ;
+        rdfs:label "DeclaraciónResponsable"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#ViviendaTurística
+:ViviendaTurística rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneDirección ;
+                                     owl:allValuesFrom <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :emailVivienda ;
+                                     owl:someValuesFrom owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :faxVivienda ;
+                                     owl:someValuesFrom owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :móvilVivienda ;
+                                     owl:someValuesFrom owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :telefonoVivienda ;
+                                     owl:someValuesFrom owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :denominación ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :páginaWeb ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :referenciaCatastral ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :teléfonoAsistencia ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneAguaCaliente ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneAsistenciaYMantenimiento ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneCalefacción ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :tieneEnergíaEléctrica ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange owl:rational
+                                   ] ;
+                   <http://purl.org/dc/elements/1.1/description> "Representa el establecimiento objeto de alquiler." ;
+                   rdfs:label "ViviendaTurística"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#domicilioNotificaciones
+:domicilioNotificaciones rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty :buzónElectrónico ;
+                                           owl:someValuesFrom owl:rational
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :emailNotificaciones ;
+                                           owl:someValuesFrom owl:rational
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :idiomaNotificaciones ;
+                                           owl:someValuesFrom owl:rational
+                                         ] ;
+                         <http://purl.org/dc/elements/1.1/description> """Domicilio postal o electrónico incluído en la Declaración
+Responsable en el que el sujeto solicitante recibirá las notificaciones
+de la Administración Pública al respecto de su
+solicitud.""" ;
+                         rdfs:label "DomicilioNotificaciones"^^rdfs:Literal .
+
+
+###  https://w3id.org/def/vt#vtEscritura
+:vtEscritura rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :fechaTítulo ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange owl:rational
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :notaría ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange owl:rational
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :numProtocolo ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange owl:rational
+                             ] ;
+             <http://purl.org/dc/elements/1.1/description> """Documento firmado ante notario que garantiza al propietario
+la titularidad se su vivienda.""" ;
+             rdfs:label "EscrituraPropiedad"^^rdfs:Literal .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/def/vtDNI
+<https://w3id.org/def/vtDNI> rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/def/vtTipoDocumento> ;
+                             rdfs:label "DNI" .
+
+
+###  https://w3id.org/def/vtNIE
+<https://w3id.org/def/vtNIE> rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/def/vtTipoDocumento> ;
+                             rdfs:label "NIE" .
+
+
+###  https://w3id.org/def/vtNIF
+<https://w3id.org/def/vtNIF> rdf:type owl:NamedIndividual ,
+                                      <https://w3id.org/def/vtTipoDocumento> ;
+                             rdfs:label "NIF" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
