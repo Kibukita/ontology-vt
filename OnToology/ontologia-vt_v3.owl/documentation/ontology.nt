@@ -1,0 +1,897 @@
+<https://w3id.org/def/vt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/vt> <http://purl.org/dc/elements/1.1/creator> "Esther Gómez Díaz" .
+<https://w3id.org/def/vt> <http://purl.org/dc/elements/1.1/description> "El propósito principal de esta ontología es proporcionar un modelo de conocimiento consensuado en el dominio del alojamiento turístico que pueda\nser usado por propietarios de alojamientos, gestores, representantes legales y administraciones públicas. Esta ontología se centra solo en el dominio del alojamiento turístico, campings, hoteles o apartahoteles poseen su propia normativa en la mayoría de las comunidades." .
+<https://w3id.org/def/vt> <http://purl.org/dc/elements/1.1/title> "Solicitud de Licencia de Viviendas Uso Turístico" .
+<https://w3id.org/def/vt> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" .
+<https://w3id.org/def/vt> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2006/time#hasDuration
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#dura> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Duration> .
+<http://www.w3.org/2006/time#hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "time:hasDuration" .
+# 
+# https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#esPropietarioDe> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#SerPropietario> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad> <http://www.w3.org/2000/01/rdf-schema#label> "esObjetodePropiedad" .
+# 
+# https://w3id.org/def/vtEsGestionadaPor
+<https://w3id.org/def/vtEsGestionadaPor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtEsGestionadaPor> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#esGestionadaPor> .
+<https://w3id.org/def/vtEsGestionadaPor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vtEsGestionadaPor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtAdmónPública> .
+<https://w3id.org/def/vtEsGestionadaPor> <http://www.w3.org/2000/01/rdf-schema#label> "gestiona" .
+# 
+# https://w3id.org/def/vtsolicita
+<https://w3id.org/def/vtsolicita> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtsolicita> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#esSolicitada> .
+<https://w3id.org/def/vtsolicita> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtsolicita> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vtsolicita> <http://www.w3.org/2000/01/rdf-schema#label> "solicita" .
+# 
+# https://w3id.org/def/vttieneTipoDocumento
+<https://w3id.org/def/vttieneTipoDocumento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vttieneTipoDocumento> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#perteneceA> .
+<https://w3id.org/def/vttieneTipoDocumento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#DocumentoIdentificación> .
+<https://w3id.org/def/vttieneTipoDocumento> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtTipoDocumento> .
+<https://w3id.org/def/vttieneTipoDocumento> <http://www.w3.org/2000/01/rdf-schema#label> "tieneTipoDocumento" .
+# 
+# https://w3id.org/def/v#esRealizadaMediante
+<https://w3id.org/def/v#esRealizadaMediante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/v#esRealizadaMediante> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#esMedioDe> .
+<https://w3id.org/def/v#esRealizadaMediante> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/v#esRealizadaMediante> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Título> .
+<https://w3id.org/def/v#esRealizadaMediante> <http://www.w3.org/2000/01/rdf-schema#label> "tieneDeclaraciónResponsable" .
+# 
+# https://w3id.org/def/v#esSolicitadaSobre
+<https://w3id.org/def/v#esSolicitadaSobre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/v#esSolicitadaSobre> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#esObjetoDeSolicitud> .
+<https://w3id.org/def/v#esSolicitadaSobre> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/v#esSolicitadaSobre> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/v#esSolicitadaSobre> <http://www.w3.org/2000/01/rdf-schema#label> "esSolicitadaSobre" .
+# 
+# https://w3id.org/def/v#explota
+<https://w3id.org/def/v#explota> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/v#explota> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#esExplotador> .
+<https://w3id.org/def/v#explota> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/v#explota> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Gestor> .
+<https://w3id.org/def/v#explota> <http://www.w3.org/2000/01/rdf-schema#label> "explota" .
+# 
+# https://w3id.org/def/v#notificaEn
+<https://w3id.org/def/v#notificaEn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/v#notificaEn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#seIncluye> .
+<https://w3id.org/def/v#notificaEn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Título> .
+<https://w3id.org/def/v#notificaEn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#domicilioNotificaciones> .
+<https://w3id.org/def/v#notificaEn> <http://www.w3.org/2000/01/rdf-schema#label> "tieneDomicilioNotificaciones" .
+# 
+# https://w3id.org/def/v#posee
+<https://w3id.org/def/v#posee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/v#posee> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#tienePropiedad> .
+<https://w3id.org/def/v#posee> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#SerPropietario> .
+<https://w3id.org/def/v#posee> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Propietario> .
+<https://w3id.org/def/v#posee> <http://www.w3.org/2000/01/rdf-schema#label> "posee" .
+# 
+# https://w3id.org/def/vl#garantizadoPor
+<https://w3id.org/def/vl#garantizadoPor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vl#garantizadoPor> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#garantizaPropiedad> .
+<https://w3id.org/def/vl#garantizadoPor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#SerPropietario> .
+<https://w3id.org/def/vl#garantizadoPor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#vtEscritura> .
+<https://w3id.org/def/vl#garantizadoPor> <http://www.w3.org/2000/01/rdf-schema#label> "garantizadoPor" .
+# 
+# https://w3id.org/def/vl#representaLegalmente
+<https://w3id.org/def/vl#representaLegalmente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vl#representaLegalmente> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#esRepresentante> .
+<https://w3id.org/def/vl#representaLegalmente> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Representación> .
+<https://w3id.org/def/vl#representaLegalmente> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#RepresentanteLegal> .
+<https://w3id.org/def/vl#representaLegalmente> <http://www.w3.org/2000/01/rdf-schema#label> "representaLegalmente" .
+# 
+# https://w3id.org/def/vt#aplica
+<https://w3id.org/def/vt#aplica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#aplica> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#tieneNormativa> .
+<https://w3id.org/def/vt#aplica> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Normativa> .
+<https://w3id.org/def/vt#aplica> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vt#aplica> <http://www.w3.org/2000/01/rdf-schema#label> "aplicaNormativa" .
+# 
+# https://w3id.org/def/vt#dura
+<https://w3id.org/def/vt#dura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#dura> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#Duration> .
+<https://w3id.org/def/vt#dura> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/def/vt#dura> <http://www.w3.org/2000/01/rdf-schema#label> "dura" .
+# 
+# https://w3id.org/def/vt#esExplotada
+<https://w3id.org/def/vt#esExplotada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esExplotada> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#objetoExplotación> .
+<https://w3id.org/def/vt#esExplotada> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#esExplotada> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/vt#esExplotada> <http://www.w3.org/2000/01/rdf-schema#label> "esExplotada" .
+# 
+# https://w3id.org/def/vt#esExplotador
+<https://w3id.org/def/vt#esExplotador> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esExplotador> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Gestor> .
+<https://w3id.org/def/vt#esExplotador> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/vt#esExplotador> <http://www.w3.org/2000/01/rdf-schema#label> "esExplotador" .
+# 
+# https://w3id.org/def/vt#esGestionadaPor
+<https://w3id.org/def/vt#esGestionadaPor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esGestionadaPor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtAdmónPública> .
+<https://w3id.org/def/vt#esGestionadaPor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vt#esGestionadaPor> <http://www.w3.org/2000/01/rdf-schema#label> "esGestionadaPor" .
+# 
+# https://w3id.org/def/vt#esMedioDe
+<https://w3id.org/def/vt#esMedioDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esMedioDe> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Título> .
+<https://w3id.org/def/vt#esMedioDe> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vt#esMedioDe> <http://www.w3.org/2000/01/rdf-schema#label> "esMedioDe" .
+# 
+# https://w3id.org/def/vt#esObjetoDeSolicitud
+<https://w3id.org/def/vt#esObjetoDeSolicitud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esObjetoDeSolicitud> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#esObjetoDeSolicitud> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vt#esObjetoDeSolicitud> <http://www.w3.org/2000/01/rdf-schema#label> "esObjetoDeSolicitud" .
+# 
+# https://w3id.org/def/vt#esPropietarioDe
+<https://w3id.org/def/vt#esPropietarioDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esPropietarioDe> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#esPropietarioDe> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#SerPropietario> .
+<https://w3id.org/def/vt#esPropietarioDe> <http://www.w3.org/2000/01/rdf-schema#label> "esPropiedadDe" .
+# 
+# https://w3id.org/def/vt#esRepresentado
+<https://w3id.org/def/vt#esRepresentado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esRepresentado> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#solicitaRepresentación> .
+<https://w3id.org/def/vt#esRepresentado> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Representación> .
+<https://w3id.org/def/vt#esRepresentado> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#esRepresentado> <http://www.w3.org/2000/01/rdf-schema#label> "esRepresentado" .
+# 
+# https://w3id.org/def/vt#esRepresentante
+<https://w3id.org/def/vt#esRepresentante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esRepresentante> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#RepresentanteLegal> .
+<https://w3id.org/def/vt#esRepresentante> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Representación> .
+<https://w3id.org/def/vt#esRepresentante> <http://www.w3.org/2000/01/rdf-schema#label> "esRepresentante" .
+# 
+# https://w3id.org/def/vt#esSolicitada
+<https://w3id.org/def/vt#esSolicitada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esSolicitada> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vt#esSolicitada> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#esSolicitada> <http://www.w3.org/2000/01/rdf-schema#label> "esSolicitada" .
+# 
+# https://w3id.org/def/vt#esSolicitante
+<https://w3id.org/def/vt#esSolicitante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#esSolicitante> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#solicitaExplotación> .
+<https://w3id.org/def/vt#esSolicitante> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Propietario> .
+<https://w3id.org/def/vt#esSolicitante> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/vt#esSolicitante> <http://www.w3.org/2000/01/rdf-schema#label> "esSolicitante" .
+# 
+# https://w3id.org/def/vt#garantizaExplotación
+<https://w3id.org/def/vt#garantizaExplotación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#garantizaExplotación> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#tieneTítuloExplotación> .
+<https://w3id.org/def/vt#garantizaExplotación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#DeclaraciónResponsable> .
+<https://w3id.org/def/vt#garantizaExplotación> <http://www.w3.org/2000/01/rdf-schema#range> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/vt#garantizaExplotación> <http://www.w3.org/2000/01/rdf-schema#label> "garantizaExplotación" .
+# 
+# https://w3id.org/def/vt#garantizaPropiedad
+<https://w3id.org/def/vt#garantizaPropiedad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#garantizaPropiedad> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#vtEscritura> .
+<https://w3id.org/def/vt#garantizaPropiedad> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#SerPropietario> .
+<https://w3id.org/def/vt#garantizaPropiedad> <http://www.w3.org/2000/01/rdf-schema#label> "garantizaPropiedad" .
+# 
+# https://w3id.org/def/vt#garantizaRepresentación
+<https://w3id.org/def/vt#garantizaRepresentación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#garantizaRepresentación> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#tienePoderNotarial> .
+<https://w3id.org/def/vt#garantizaRepresentación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#PoderNotarial> .
+<https://w3id.org/def/vt#garantizaRepresentación> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Representación> .
+<https://w3id.org/def/vt#garantizaRepresentación> <http://www.w3.org/2000/01/rdf-schema#label> "garantizaRepresentación" .
+# 
+# https://w3id.org/def/vt#identifica
+<https://w3id.org/def/vt#identifica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#identifica> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#tieneDocumentoIdentificación> .
+<https://w3id.org/def/vt#identifica> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#DocumentoIdentificación> .
+<https://w3id.org/def/vt#identifica> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#identifica> <http://www.w3.org/2000/01/rdf-schema#label> "identifica" .
+# 
+# https://w3id.org/def/vt#objetoExplotación
+<https://w3id.org/def/vt#objetoExplotación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#objetoExplotación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/vt#objetoExplotación> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#objetoExplotación> <http://www.w3.org/2000/01/rdf-schema#label> "objetoExplotación" .
+# 
+# https://w3id.org/def/vt#perteneceA
+<https://w3id.org/def/vt#perteneceA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#perteneceA> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/vt#perteneceA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtTipoDocumento> .
+<https://w3id.org/def/vt#perteneceA> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#DocumentoIdentificación> .
+<https://w3id.org/def/vt#perteneceA> <http://www.w3.org/2000/01/rdf-schema#label> "perteneceA" .
+# 
+# https://w3id.org/def/vt#seIncluye
+<https://w3id.org/def/vt#seIncluye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#seIncluye> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#domicilioNotificaciones> .
+<https://w3id.org/def/vt#seIncluye> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Título> .
+<https://w3id.org/def/vt#seIncluye> <http://www.w3.org/2000/01/rdf-schema#label> "seIncluye" .
+# 
+# https://w3id.org/def/vt#seUbica
+<https://w3id.org/def/vt#seUbica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#seUbica> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vt#tieneDirección> .
+<https://w3id.org/def/vt#seUbica> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/address> .
+<https://w3id.org/def/vt#seUbica> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/def/vt#seUbica> <http://www.w3.org/2000/01/rdf-schema#label> "seUbica" .
+# 
+# https://w3id.org/def/vt#solicitaExplotación
+<https://w3id.org/def/vt#solicitaExplotación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#solicitaExplotación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/vt#solicitaExplotación> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Propietario> .
+<https://w3id.org/def/vt#solicitaExplotación> <http://www.w3.org/2000/01/rdf-schema#label> "solicitaExplotación" .
+# 
+# https://w3id.org/def/vt#solicitaRepresentación
+<https://w3id.org/def/vt#solicitaRepresentación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#solicitaRepresentación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#solicitaRepresentación> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Representación> .
+<https://w3id.org/def/vt#solicitaRepresentación> <http://www.w3.org/2000/01/rdf-schema#label> "solicitaRepresentación" .
+# 
+# https://w3id.org/def/vt#tieneDirección
+<https://w3id.org/def/vt#tieneDirección> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#tieneDirección> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/def/vt#tieneDirección> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/address> .
+<https://w3id.org/def/vt#tieneDirección> <http://www.w3.org/2000/01/rdf-schema#label> "tieneDirección" .
+# 
+# https://w3id.org/def/vt#tieneDocumentoIdentificación
+<https://w3id.org/def/vt#tieneDocumentoIdentificación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#tieneDocumentoIdentificación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#tieneDocumentoIdentificación> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#DocumentoIdentificación> .
+<https://w3id.org/def/vt#tieneDocumentoIdentificación> <http://www.w3.org/2000/01/rdf-schema#label> "tieneDocumentoIdentificación" .
+# 
+# https://w3id.org/def/vt#tieneNormativa
+<https://w3id.org/def/vt#tieneNormativa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#tieneNormativa> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtsolicitudArranqueActividad> .
+<https://w3id.org/def/vt#tieneNormativa> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#Normativa> .
+<https://w3id.org/def/vt#tieneNormativa> <http://www.w3.org/2000/01/rdf-schema#label> "tieneNormativa" .
+# 
+# https://w3id.org/def/vt#tienePoderNotarial
+<https://w3id.org/def/vt#tienePoderNotarial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#tienePoderNotarial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Representación> .
+<https://w3id.org/def/vt#tienePoderNotarial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#PoderNotarial> .
+<https://w3id.org/def/vt#tienePoderNotarial> <http://www.w3.org/2000/01/rdf-schema#label> "tienePoderNotarial" .
+# 
+# https://w3id.org/def/vt#tienePropiedad
+<https://w3id.org/def/vt#tienePropiedad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#tienePropiedad> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Propietario> .
+<https://w3id.org/def/vt#tienePropiedad> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#SerPropietario> .
+<https://w3id.org/def/vt#tienePropiedad> <http://www.w3.org/2000/01/rdf-schema#label> "tienePropiedad" .
+# 
+# https://w3id.org/def/vt#tieneTítuloExplotación
+<https://w3id.org/def/vt#tieneTítuloExplotación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vt#tieneTítuloExplotación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> .
+<https://w3id.org/def/vt#tieneTítuloExplotación> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vt#DeclaraciónResponsable> .
+<https://w3id.org/def/vt#tieneTítuloExplotación> <http://www.w3.org/2000/01/rdf-schema#label> "tieneTítuloExplotación" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtApellidos
+<https://w3id.org/def/vtApellidos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtApellidos> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtApellidos> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtApellidos> <http://purl.org/dc/elements/1.1/description> "Apellidos de la persona física." .
+<https://w3id.org/def/vtApellidos> <http://www.w3.org/2000/01/rdf-schema#label> "apellidos" .
+# 
+# https://w3id.org/def/vtdocumento
+<https://w3id.org/def/vtdocumento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtdocumento> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vt#DocumentoIdentificación> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tieneDocumentoIdentificación> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtdocumento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtdocumento> <http://purl.org/dc/elements/1.1/description> "Número del documento de identificación." .
+<https://w3id.org/def/vtdocumento> <http://www.w3.org/2000/01/rdf-schema#label> "númeroDocumento" .
+# 
+# https://w3id.org/def/vtfax
+<https://w3id.org/def/vtfax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtfax> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtfax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtfax> <http://purl.org/dc/elements/1.1/description> "Número/s de fax de la persona física o jurídica." .
+<https://w3id.org/def/vtfax> <http://www.w3.org/2000/01/rdf-schema#label> "fax" .
+# 
+# https://w3id.org/def/vtmóvil
+<https://w3id.org/def/vtmóvil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtmóvil> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtmóvil> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtmóvil> <http://purl.org/dc/elements/1.1/description> "Número/s de móvil de contacto de la persona física o jurídica." .
+<https://w3id.org/def/vtmóvil> <http://www.w3.org/2000/01/rdf-schema#label> "móvil" .
+# 
+# https://w3id.org/def/vtnacionalidad
+<https://w3id.org/def/vtnacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtnacionalidad> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtnacionalidad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtnacionalidad> <http://purl.org/dc/elements/1.1/description> "Nacionalidad de la persona física." .
+<https://w3id.org/def/vtnacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "nacionalidad" .
+# 
+# https://w3id.org/def/vtnombre
+<https://w3id.org/def/vtnombre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtnombre> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtnombre> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtnombre> <http://purl.org/dc/elements/1.1/description> "Nombre de la persona física." .
+<https://w3id.org/def/vtnombre> <http://www.w3.org/2000/01/rdf-schema#label> "nombre" .
+# 
+# https://w3id.org/def/vtrazónSocial
+<https://w3id.org/def/vtrazónSocial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtrazónSocial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtrazónSocial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtrazónSocial> <http://purl.org/dc/elements/1.1/description> "Denominación Social en el caso de personas jurídicas." .
+<https://w3id.org/def/vtrazónSocial> <http://www.w3.org/2000/01/rdf-schema#label> "razón social" .
+# 
+# https://w3id.org/def/vtteléfono
+<https://w3id.org/def/vtteléfono> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtteléfono> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vtteléfono> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtteléfono> <http://purl.org/dc/elements/1.1/description> "Teléfono/s de contacto de la persona física o jurídica." .
+<https://w3id.org/def/vtteléfono> <http://www.w3.org/2000/01/rdf-schema#label> "teléfono" .
+# 
+# https://w3id.org/def/vt#CSV
+<https://w3id.org/def/vt#CSV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#CSV> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#PoderNotarial> .
+<https://w3id.org/def/vt#CSV> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#CSV> <http://purl.org/dc/elements/1.1/description> "Código Seguro de Verificación que identifica el documento\nunívocamente." .
+<https://w3id.org/def/vt#CSV> <http://www.w3.org/2000/01/rdf-schema#label> "CSV" .
+# 
+# https://w3id.org/def/vt#buzónElectrónico
+<https://w3id.org/def/vt#buzónElectrónico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#buzónElectrónico> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#domicilioNotificaciones> .
+<https://w3id.org/def/vt#buzónElectrónico> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#buzónElectrónico> <http://purl.org/dc/elements/1.1/description> "Buzón electrónico designado por el titular de la solicitud\npara recibir notificaciones." .
+<https://w3id.org/def/vt#buzónElectrónico> <http://www.w3.org/2000/01/rdf-schema#label> "buzónElectrónico" .
+# 
+# https://w3id.org/def/vt#compañíaSeguros
+<https://w3id.org/def/vt#compañíaSeguros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#compañíaSeguros> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#compañíaSeguros> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#compañíaSeguros> <http://purl.org/dc/elements/1.1/description> "Nombre de la compañía de seguros, si tiene poliza de seguros." .
+<https://w3id.org/def/vt#compañíaSeguros> <http://www.w3.org/2000/01/rdf-schema#label> "compañíaSeguros" .
+# 
+# https://w3id.org/def/vt#denominación
+<https://w3id.org/def/vt#denominación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#denominación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#denominación> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#denominación> <http://purl.org/dc/elements/1.1/description> "Nombre que recibe el establecimiento." .
+<https://w3id.org/def/vt#denominación> <http://www.w3.org/2000/01/rdf-schema#label> "denominación" .
+# 
+# https://w3id.org/def/vt#email
+<https://w3id.org/def/vt#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#email> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#email> <http://purl.org/dc/elements/1.1/description> "Direccion/es de email de contacto de la persona física o\njurídica." .
+<https://w3id.org/def/vt#email> <http://www.w3.org/2000/01/rdf-schema#label> "email" .
+# 
+# https://w3id.org/def/vt#emailNotificaciones
+<https://w3id.org/def/vt#emailNotificaciones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#emailNotificaciones> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#domicilioNotificaciones> .
+<https://w3id.org/def/vt#emailNotificaciones> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#emailNotificaciones> <http://purl.org/dc/elements/1.1/description> "email indicado por el titular de la solicitud para recibir\nnotificaciones." .
+<https://w3id.org/def/vt#emailNotificaciones> <http://www.w3.org/2000/01/rdf-schema#label> "emailNotificaciones" .
+# 
+# https://w3id.org/def/vt#emailVivienda
+<https://w3id.org/def/vt#emailVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#emailVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#emailVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#emailVivienda> <http://purl.org/dc/elements/1.1/description> "Direccion/es de email de contacto de la vivienda." .
+<https://w3id.org/def/vt#emailVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "emailVivienda" .
+# 
+# https://w3id.org/def/vt#faxVivienda
+<https://w3id.org/def/vt#faxVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#faxVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#faxVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#faxVivienda> <http://purl.org/dc/elements/1.1/description> "Número/s de fax de la persona física o vivienda." .
+<https://w3id.org/def/vt#faxVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "faxVivienda" .
+# 
+# https://w3id.org/def/vt#fechaDeclaraciónResponsable
+<https://w3id.org/def/vt#fechaDeclaraciónResponsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#fechaDeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Título> .
+<https://w3id.org/def/vt#fechaDeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/vt#fechaDeclaraciónResponsable> <http://purl.org/dc/elements/1.1/description> "Fecha de la firma de la declaración responsable" .
+<https://w3id.org/def/vt#fechaDeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#label> "fechaDeclaraciónResponsable" .
+# 
+# https://w3id.org/def/vt#fechaPoderNotarial
+<https://w3id.org/def/vt#fechaPoderNotarial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#fechaPoderNotarial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#PoderNotarial> .
+<https://w3id.org/def/vt#fechaPoderNotarial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/vt#fechaPoderNotarial> <http://purl.org/dc/elements/1.1/description> "Fecha de la firma del poder notarial" .
+<https://w3id.org/def/vt#fechaPoderNotarial> <http://www.w3.org/2000/01/rdf-schema#label> "fechaPoderNotarial" .
+# 
+# https://w3id.org/def/vt#fechaPublicación
+<https://w3id.org/def/vt#fechaPublicación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#fechaPublicación> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Normativa> .
+<https://w3id.org/def/vt#fechaPublicación> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/vt#fechaPublicación> <http://purl.org/dc/elements/1.1/description> "Fecha de publicación de la normativa." .
+<https://w3id.org/def/vt#fechaPublicación> <http://www.w3.org/2000/01/rdf-schema#label> "fechaPublicación" .
+# 
+# https://w3id.org/def/vt#fechaTítulo
+<https://w3id.org/def/vt#fechaTítulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#fechaTítulo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#DeclaraciónResponsable> .
+<https://w3id.org/def/vt#fechaTítulo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/vt#fechaTítulo> <http://purl.org/dc/elements/1.1/description> "Fecha de la firma del título." .
+<https://w3id.org/def/vt#fechaTítulo> <http://www.w3.org/2000/01/rdf-schema#label> "fechaTítulo" .
+# 
+# https://w3id.org/def/vt#identificaciónTítulo
+<https://w3id.org/def/vt#identificaciónTítulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#identificaciónTítulo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#DeclaraciónResponsable> .
+<https://w3id.org/def/vt#identificaciónTítulo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#identificaciónTítulo> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/def/vt#tipoTítulo> .
+<https://w3id.org/def/vt#identificaciónTítulo> <http://purl.org/dc/elements/1.1/description> "Tipo de título, por ejemplo, contrato de compra-venta, contrato\nde servicios, etc." .
+<https://w3id.org/def/vt#identificaciónTítulo> <http://www.w3.org/2000/01/rdf-schema#label> "identificaciónTítulo" .
+# 
+# https://w3id.org/def/vt#idiomaNotificaciones
+<https://w3id.org/def/vt#idiomaNotificaciones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#idiomaNotificaciones> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#domicilioNotificaciones> .
+<https://w3id.org/def/vt#idiomaNotificaciones> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#idiomaNotificaciones> <http://purl.org/dc/elements/1.1/description> "idioma indicado por el titular de la solicitud para recibir\nnotificaciones." .
+<https://w3id.org/def/vt#idiomaNotificaciones> <http://www.w3.org/2000/01/rdf-schema#label> "idiomaNotificaciones" .
+# 
+# https://w3id.org/def/vt#motivo
+<https://w3id.org/def/vt#motivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#motivo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Título> .
+<https://w3id.org/def/vt#motivo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#motivo> <http://purl.org/dc/elements/1.1/description> "Motivo de la declaración responsable, por ejemplo: Ïnicio\nde Actividad\"." .
+<https://w3id.org/def/vt#motivo> <http://www.w3.org/2000/01/rdf-schema#label> "motivo" .
+# 
+# https://w3id.org/def/vt#móvilVivienda
+<https://w3id.org/def/vt#móvilVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#móvilVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#móvilVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#móvilVivienda> <http://purl.org/dc/elements/1.1/description> "Número/s de móvil de contacto de la vivienda." .
+<https://w3id.org/def/vt#móvilVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "móvilVivienda" .
+# 
+# https://w3id.org/def/vt#notaría
+<https://w3id.org/def/vt#notaría> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#notaría> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#vtEscritura> .
+<https://w3id.org/def/vt#notaría> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#notaría> <http://purl.org/dc/elements/1.1/description> "Notaría en la que ha sido firmada la escritura de propiedad." .
+<https://w3id.org/def/vt#notaría> <http://www.w3.org/2000/01/rdf-schema#label> "notaría" .
+# 
+# https://w3id.org/def/vt#numProtocolo
+<https://w3id.org/def/vt#numProtocolo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#numProtocolo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#vtEscritura> .
+<https://w3id.org/def/vt#numProtocolo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#numProtocolo> <http://purl.org/dc/elements/1.1/description> "Número de registro para su identificación y localización." .
+<https://w3id.org/def/vt#numProtocolo> <http://www.w3.org/2000/01/rdf-schema#label> "numProtocolo" .
+# 
+# https://w3id.org/def/vt#polizaSeguros
+<https://w3id.org/def/vt#polizaSeguros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#polizaSeguros> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#polizaSeguros> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#polizaSeguros> <http://purl.org/dc/elements/1.1/description> "Número de la poliza, si tiene poliza de seguros." .
+<https://w3id.org/def/vt#polizaSeguros> <http://www.w3.org/2000/01/rdf-schema#label> "polizaSeguros" .
+# 
+# https://w3id.org/def/vt#páginaWeb
+<https://w3id.org/def/vt#páginaWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#páginaWeb> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#páginaWeb> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#páginaWeb> <http://purl.org/dc/elements/1.1/description> "Página web de la vivienda, si la tiene." .
+<https://w3id.org/def/vt#páginaWeb> <http://www.w3.org/2000/01/rdf-schema#label> "páginaWeb" .
+# 
+# https://w3id.org/def/vt#referenciaCatastral
+<https://w3id.org/def/vt#referenciaCatastral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#referenciaCatastral> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#referenciaCatastral> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#referenciaCatastral> <http://purl.org/dc/elements/1.1/description> "Identificador otorgado por el catastro que identifica unívocamente a una vivienda en el territorio español." .
+<https://w3id.org/def/vt#referenciaCatastral> <http://www.w3.org/2000/01/rdf-schema#label> "referenciaCatastral" .
+# 
+# https://w3id.org/def/vt#telefonoVivienda
+<https://w3id.org/def/vt#telefonoVivienda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#telefonoVivienda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#telefonoVivienda> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#telefonoVivienda> <http://purl.org/dc/elements/1.1/description> "Teléfono/s de contacto de la vivienda." .
+<https://w3id.org/def/vt#telefonoVivienda> <http://www.w3.org/2000/01/rdf-schema#label> "teléfonoVivienda" .
+# 
+# https://w3id.org/def/vt#teléfonoAsistencia
+<https://w3id.org/def/vt#teléfonoAsistencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#teléfonoAsistencia> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#teléfonoAsistencia> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#teléfonoAsistencia> <http://purl.org/dc/elements/1.1/description> "Teléfono utilizado para comunicar averías en la vivienda o solicitar algún servicio." .
+<https://w3id.org/def/vt#teléfonoAsistencia> <http://www.w3.org/2000/01/rdf-schema#label> "teléfonoAsistencia" .
+# 
+# https://w3id.org/def/vt#tieneAguaCaliente
+<https://w3id.org/def/vt#tieneAguaCaliente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#tieneAguaCaliente> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#tieneAguaCaliente> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/vt#tieneAguaCaliente> <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene agua caliente." .
+<https://w3id.org/def/vt#tieneAguaCaliente> <http://www.w3.org/2000/01/rdf-schema#label> "tieneAguaCaliente" .
+# 
+# https://w3id.org/def/vt#tieneAsistenciaYMantenimiento
+<https://w3id.org/def/vt#tieneAsistenciaYMantenimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#tieneAsistenciaYMantenimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#tieneAsistenciaYMantenimiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/vt#tieneAsistenciaYMantenimiento> <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene asistencia y mantenimiento." .
+<https://w3id.org/def/vt#tieneAsistenciaYMantenimiento> <http://www.w3.org/2000/01/rdf-schema#label> "tieneAsistenciaYMantenimiento" .
+# 
+# https://w3id.org/def/vt#tieneCalefacción
+<https://w3id.org/def/vt#tieneCalefacción> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#tieneCalefacción> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#tieneCalefacción> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/vt#tieneCalefacción> <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene calefacción." .
+<https://w3id.org/def/vt#tieneCalefacción> <http://www.w3.org/2000/01/rdf-schema#label> "tieneCalefacción" .
+# 
+# https://w3id.org/def/vt#tieneEnergíaEléctrica
+<https://w3id.org/def/vt#tieneEnergíaEléctrica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#tieneEnergíaEléctrica> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#ViviendaTurística> .
+<https://w3id.org/def/vt#tieneEnergíaEléctrica> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/vt#tieneEnergíaEléctrica> <http://purl.org/dc/elements/1.1/description> "SÍ/NO tiene energía eléctrica." .
+<https://w3id.org/def/vt#tieneEnergíaEléctrica> <http://www.w3.org/2000/01/rdf-schema#label> "tieneEnergíaEléctrica" .
+# 
+# https://w3id.org/def/vt#tipoTítulo
+<https://w3id.org/def/vt#tipoTítulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#tipoTítulo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#DeclaraciónResponsable> .
+<https://w3id.org/def/vt#tipoTítulo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#tipoTítulo> <http://purl.org/dc/elements/1.1/description> "Tipo de título, por ejemplo, contrato de compra-venta, contrato\nde servicios, etc." .
+<https://w3id.org/def/vt#tipoTítulo> <http://www.w3.org/2000/01/rdf-schema#label> "tipoTítulo" .
+# 
+# https://w3id.org/def/vt#títuloNormativa
+<https://w3id.org/def/vt#títuloNormativa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vt#títuloNormativa> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vt#Normativa> .
+<https://w3id.org/def/vt#títuloNormativa> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vt#títuloNormativa> <http://purl.org/dc/elements/1.1/description> "Título de la normativa." .
+<https://w3id.org/def/vt#títuloNormativa> <http://www.w3.org/2000/01/rdf-schema#label> "títuloNormativa" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/address
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#label> "schema:Address" .
+# 
+# http://www.w3.org/2006/time#Duration
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Duration> <http://purl.org/dc/elements/1.1/description> "Clase Duration de la ontología Time (http://www.w3.org/2006/time)" .
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/2000/01/rdf-schema#label> "time:Duration" .
+# 
+# http://xmlns.com/foaf/spec/Agent
+<http://xmlns.com/foaf/spec/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/spec/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://xmlns.com/foaf/spec/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "foaf:Agent" .
+# 
+# https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/address> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal> <http://purl.org/dc/elements/1.1/description> "Describe una dirección postal en España." .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal> <http://www.w3.org/2000/01/rdf-schema#label> "esdir:DirecciónPostal"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre una vivienda turística, un propietario y un gesor." .
+<https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación> <http://www.w3.org/2000/01/rdf-schema#label> "Explotación" .
+# 
+# https://w3id.org/def/vtAdmónPública
+<https://w3id.org/def/vtAdmónPública> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtAdmónPública> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtnombre> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vtAdmónPública> <http://purl.org/dc/elements/1.1/description> "Representa al órgano competente a cargo de velar por el\ncumplimiento de las normativas." .
+<https://w3id.org/def/vtAdmónPública> <http://www.w3.org/2000/01/rdf-schema#label> "AdmónPública" .
+# 
+# https://w3id.org/def/vtTipoDocumento
+<https://w3id.org/def/vtTipoDocumento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtTipoDocumento> <http://purl.org/dc/elements/1.1/description> "Tipo de documento de identificación. En esta Ontología solo\nse han considerado los 3 tipos solicitados por las Comunidades\nAutónomas: DNI, NIF y NIE como instancias de la\nclase TipoDocumento" .
+<https://w3id.org/def/vtTipoDocumento> <http://www.w3.org/2000/01/rdf-schema#label> "TipoDocumento" .
+# 
+# https://w3id.org/def/vtsolicitudArranqueActividad
+<https://w3id.org/def/vtsolicitudArranqueActividad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtsolicitudArranqueActividad> <http://www.w3.org/2000/01/rdf-schema#label> "SolicitudArranqueActividad" .
+# 
+# https://w3id.org/def/vt#DeclaraciónResponsable
+<https://w3id.org/def/vt#DeclaraciónResponsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#DeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Duration> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasDuration> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#DeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#fechaTítulo> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#DeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#identificaciónTítulo> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#DeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tipoTítulo> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#DeclaraciónResponsable> <http://purl.org/dc/elements/1.1/description> "Documento firmado entre el Propietario y el Gestor que recoge\nlos términos en los que el Gestor explotará la vivienda\nturística. Este documento tiene una validez temporal." .
+<https://w3id.org/def/vt#DeclaraciónResponsable> <http://www.w3.org/2000/01/rdf-schema#label> "Título Explotación"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#DocumentoIdentificación
+<https://w3id.org/def/vt#DocumentoIdentificación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#DocumentoIdentificación> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtdocumento> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#DocumentoIdentificación> <http://purl.org/dc/elements/1.1/description> "Documento que acredita la identidad de una persona, ya sea física o jurídica." .
+<https://w3id.org/def/vt#DocumentoIdentificación> <http://www.w3.org/2000/01/rdf-schema#label> "DocumentoIdentificación" .
+# 
+# https://w3id.org/def/vt#Gestor
+<https://w3id.org/def/vt#Gestor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Gestor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#Gestor> <http://purl.org/dc/elements/1.1/description> "Representa al sujeto (persona física o jurídica) que explota\ncomercialmente la vivienda. Propietario y Gestor firman\nun contrato de servicios que recoge los términos de su relación." .
+<https://w3id.org/def/vt#Gestor> <http://www.w3.org/2000/01/rdf-schema#label> "Gestor"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#Normativa
+<https://w3id.org/def/vt#Normativa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Normativa> <http://purl.org/dc/elements/1.1/description> "Representa cada uno de los documentos legales redactados\npor la Administración Pública que recogen los requisitos\na cumplir por las viviendas turísticas para poder iniciar\nactividad comercial sobre ellas." .
+<https://w3id.org/def/vt#Normativa> <http://www.w3.org/2000/01/rdf-schema#label> "Normativa" .
+# 
+# https://w3id.org/def/vt#Persona
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/spec/Agent> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tieneDirección> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtteléfono> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#email> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtfax> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtmóvil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtnacionalidad> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtApellidos> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtnombre> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtrazónSocial> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Persona> <http://purl.org/dc/elements/1.1/description> "Esta clase puede actuar con diferentes roles: Propietario,\nGestor o Representante Legal y todos ellos pueden solicitar\nel arranque o inicio de actividad paara la vivienda." .
+<https://w3id.org/def/vt#Persona> <http://www.w3.org/2000/01/rdf-schema#label> "Persona" .
+# 
+# https://w3id.org/def/vt#PoderNotarial
+<https://w3id.org/def/vt#PoderNotarial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#PoderNotarial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Duration> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/time#hasDuration> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#PoderNotarial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid18 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#CSV> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#PoderNotarial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#fechaTítulo> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#PoderNotarial> <http://purl.org/dc/elements/1.1/description> "Documento firmado entre el Propietario o Gestor y su Representante\nLegal ante notario y que avala la facultad del\nRepresentante para actuar en nombre del Representado.\nEste documento tiene una validez temporal." .
+<https://w3id.org/def/vt#PoderNotarial> <http://www.w3.org/2000/01/rdf-schema#label> "PoderNotarial"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#Propietario
+<https://w3id.org/def/vt#Propietario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Propietario> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#Propietario> <http://purl.org/dc/elements/1.1/description> "Representa al sujeto (persona física o jurídica) que posee\nla vivienda." .
+<https://w3id.org/def/vt#Propietario> <http://www.w3.org/2000/01/rdf-schema#label> "Propietario" .
+# 
+# https://w3id.org/def/vt#Representación
+<https://w3id.org/def/vt#Representación> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Representación> <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre un representante Legal y su representado, el propietario de una vivienda." .
+<https://w3id.org/def/vt#Representación> <http://www.w3.org/2000/01/rdf-schema#label> "Representación"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#RepresentanteLegal
+<https://w3id.org/def/vt#RepresentanteLegal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#RepresentanteLegal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vt#Persona> .
+<https://w3id.org/def/vt#RepresentanteLegal> <http://purl.org/dc/elements/1.1/description> "Representa al sujeto (persona física o jurídica) que representa\nal propietario o gestor y actúa en su nombre ante la\nAdministración Pública. Debe existir un poder notarial que\npermita al representante actuar en nombre del representado." .
+<https://w3id.org/def/vt#RepresentanteLegal> <http://www.w3.org/2000/01/rdf-schema#label> "RepresentanteLegal" .
+# 
+# https://w3id.org/def/vt#SerPropietario
+<https://w3id.org/def/vt#SerPropietario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#SerPropietario> <http://purl.org/dc/elements/1.1/description> "Relación n-aria entre una Vivienda Tur´sitica y su propietario." .
+<https://w3id.org/def/vt#SerPropietario> <http://www.w3.org/2000/01/rdf-schema#label> "SerPropietario"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#Título
+<https://w3id.org/def/vt#Título> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#Título> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vt#domicilioNotificaciones> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/v#notificaEn> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Título> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#motivo> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Título> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid22 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#fechaTítulo> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#Título> <http://purl.org/dc/elements/1.1/description> "Representa el documento firmado por el Propietario, Gestor\no Representante Legal utilizado para solicitar el inicio\nde actividad sobre la vivienda. El solicitante se compromete\nde forma responsable a cumplir los requisitos de la\nmisma recogidos en las normativas asociadas." .
+<https://w3id.org/def/vt#Título> <http://www.w3.org/2000/01/rdf-schema#label> "DeclaraciónResponsable"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#ViviendaTurística
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tieneDirección> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#emailVivienda> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#faxVivienda> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#móvilVivienda> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#telefonoVivienda> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid28 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#denominación> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid29 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#páginaWeb> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid30 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#referenciaCatastral> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid31 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#teléfonoAsistencia> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid32 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tieneAguaCaliente> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid33 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tieneAsistenciaYMantenimiento> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid34 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tieneCalefacción> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid35 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#tieneEnergíaEléctrica> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#ViviendaTurística> <http://purl.org/dc/elements/1.1/description> "Representa el establecimiento objeto de alquiler." .
+<https://w3id.org/def/vt#ViviendaTurística> <http://www.w3.org/2000/01/rdf-schema#label> "ViviendaTurística"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#domicilioNotificaciones
+<https://w3id.org/def/vt#domicilioNotificaciones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#domicilioNotificaciones> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#buzónElectrónico> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#domicilioNotificaciones> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#emailNotificaciones> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#domicilioNotificaciones> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#idiomaNotificaciones> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#domicilioNotificaciones> <http://purl.org/dc/elements/1.1/description> "Domicilio postal o electrónico incluído en la Declaración\nResponsable en el que el sujeto solicitante recibirá las notificaciones\nde la Administración Pública al respecto de su\nsolicitud." .
+<https://w3id.org/def/vt#domicilioNotificaciones> <http://www.w3.org/2000/01/rdf-schema#label> "DomicilioNotificaciones"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/vt#vtEscritura
+<https://w3id.org/def/vt#vtEscritura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vt#vtEscritura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid39 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#fechaTítulo> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#vtEscritura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid40 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#notaría> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#vtEscritura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid41 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vt#numProtocolo> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/vt#vtEscritura> <http://purl.org/dc/elements/1.1/description> "Documento firmado ante notario que garantiza al propietario\nla titularidad se su vivienda." .
+<https://w3id.org/def/vt#vtEscritura> <http://www.w3.org/2000/01/rdf-schema#label> "EscrituraPropiedad"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtDNI
+<https://w3id.org/def/vtDNI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtDNI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtTipoDocumento> .
+<https://w3id.org/def/vtDNI> <http://www.w3.org/2000/01/rdf-schema#label> "DNI" .
+# 
+# https://w3id.org/def/vtNIE
+<https://w3id.org/def/vtNIE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtNIE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtTipoDocumento> .
+<https://w3id.org/def/vtNIE> <http://www.w3.org/2000/01/rdf-schema#label> "NIE" .
+# 
+# https://w3id.org/def/vtNIF
+<https://w3id.org/def/vtNIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtNIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtTipoDocumento> .
+<https://w3id.org/def/vtNIF> <http://www.w3.org/2000/01/rdf-schema#label> "NIF" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

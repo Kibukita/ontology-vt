@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "https://w3id.org/def/vt#Gestor" "schema:address" "https://w3id.org/def/vt#Propietario" "https://w3id.org/def/vt#Persona" "esdir:DirecciónPostal" "foaf:Agent" "https://w3id.org/def/vt#RepresentanteLegal" ; /*classes style*/
+	"https://w3id.org/def/vt#RepresentanteLegal" -> "https://w3id.org/def/vt#Persona" [ label = "rdfs:subClassOf" ];
+	"esdir:DirecciónPostal" -> "schema:address" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/vt#Gestor" -> "https://w3id.org/def/vt#Persona" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/vt#Persona" -> "foaf:Agent" [ label = "rdfs:subClassOf" ];
+	"foaf:Agent" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"schema:address" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/def/vt#Propietario" -> "https://w3id.org/def/vt#Persona" [ label = "rdfs:subClassOf" ];
+
+}

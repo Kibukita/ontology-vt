@@ -1,0 +1,403 @@
+{
+  "@context" : {
+    "tieneEnergíaEléctrica" : {
+      "@id" : "https://w3id.org/def/vt#tieneEnergíaEléctrica",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "fechaPublicación" : {
+      "@id" : "https://w3id.org/def/vt#fechaPublicación",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "compañíaSeguros" : {
+      "@id" : "https://w3id.org/def/vt#compañíaSeguros",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fechaDeclaraciónResponsable" : {
+      "@id" : "https://w3id.org/def/vt#fechaDeclaraciónResponsable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "CSV" : {
+      "@id" : "https://w3id.org/def/vt#CSV",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tieneDocumentoIdentificación" : {
+      "@id" : "https://w3id.org/def/vt#tieneDocumentoIdentificación",
+      "@type" : "@id"
+    },
+    "denominación" : {
+      "@id" : "https://w3id.org/def/vt#denominación",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vtnacionalidad" : {
+      "@id" : "https://w3id.org/def/vtnacionalidad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "esMedioDe" : {
+      "@id" : "https://w3id.org/def/vt#esMedioDe",
+      "@type" : "@id"
+    },
+    "PoderNotarial" : {
+      "@id" : "https://w3id.org/def/vt#PoderNotarial"
+    },
+    "DeclaraciónResponsable" : {
+      "@id" : "https://w3id.org/def/vt#DeclaraciónResponsable"
+    },
+    "esExplotada" : {
+      "@id" : "https://w3id.org/def/vt#esExplotada",
+      "@type" : "@id"
+    },
+    "identificaciónTítulo" : {
+      "@id" : "https://w3id.org/def/vt#identificaciónTítulo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "esRepresentado" : {
+      "@id" : "https://w3id.org/def/vt#esRepresentado",
+      "@type" : "@id"
+    },
+    "solicitaRepresentación" : {
+      "@id" : "https://w3id.org/def/vt#solicitaRepresentación",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "vtnombre" : {
+      "@id" : "https://w3id.org/def/vtnombre",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "representaLegalmente" : {
+      "@id" : "https://w3id.org/def/vl#representaLegalmente",
+      "@type" : "@id"
+    },
+    "vtteléfono" : {
+      "@id" : "https://w3id.org/def/vtteléfono",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vtEscritura" : {
+      "@id" : "https://w3id.org/def/vt#vtEscritura"
+    },
+    "esRealizadaMediante" : {
+      "@id" : "https://w3id.org/def/v#esRealizadaMediante",
+      "@type" : "@id"
+    },
+    "esObjetodePropiedad" : {
+      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#esObjetodePropiedad",
+      "@type" : "@id"
+    },
+    "polizaSeguros" : {
+      "@id" : "https://w3id.org/def/vt#polizaSeguros",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ViviendaTurística" : {
+      "@id" : "https://w3id.org/def/vt#ViviendaTurística"
+    },
+    "notaría" : {
+      "@id" : "https://w3id.org/def/vt#notaría",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "garantizaRepresentación" : {
+      "@id" : "https://w3id.org/def/vt#garantizaRepresentación",
+      "@type" : "@id"
+    },
+    "aplica" : {
+      "@id" : "https://w3id.org/def/vt#aplica",
+      "@type" : "@id"
+    },
+    "garantizadoPor" : {
+      "@id" : "https://w3id.org/def/vl#garantizadoPor",
+      "@type" : "@id"
+    },
+    "garantizaExplotación" : {
+      "@id" : "https://w3id.org/def/vt#garantizaExplotación",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "vttieneTipoDocumento" : {
+      "@id" : "https://w3id.org/def/vttieneTipoDocumento",
+      "@type" : "@id"
+    },
+    "posee" : {
+      "@id" : "https://w3id.org/def/v#posee",
+      "@type" : "@id"
+    },
+    "emailVivienda" : {
+      "@id" : "https://w3id.org/def/vt#emailVivienda",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "objetoExplotación" : {
+      "@id" : "https://w3id.org/def/vt#objetoExplotación",
+      "@type" : "@id"
+    },
+    "domicilioNotificaciones" : {
+      "@id" : "https://w3id.org/def/vt#domicilioNotificaciones"
+    },
+    "buzónElectrónico" : {
+      "@id" : "https://w3id.org/def/vt#buzónElectrónico",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "numProtocolo" : {
+      "@id" : "https://w3id.org/def/vt#numProtocolo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "email" : {
+      "@id" : "https://w3id.org/def/vt#email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tieneTítuloExplotación" : {
+      "@id" : "https://w3id.org/def/vt#tieneTítuloExplotación",
+      "@type" : "@id"
+    },
+    "hasDuration" : {
+      "@id" : "http://www.w3.org/2006/time#hasDuration",
+      "@type" : "@id"
+    },
+    "vtEsGestionadaPor" : {
+      "@id" : "https://w3id.org/def/vtEsGestionadaPor",
+      "@type" : "@id"
+    },
+    "Propietario" : {
+      "@id" : "https://w3id.org/def/vt#Propietario"
+    },
+    "Persona" : {
+      "@id" : "https://w3id.org/def/vt#Persona"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/spec/Agent"
+    },
+    "seUbica" : {
+      "@id" : "https://w3id.org/def/vt#seUbica",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "tipoTítulo" : {
+      "@id" : "https://w3id.org/def/vt#tipoTítulo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tieneAsistenciaYMantenimiento" : {
+      "@id" : "https://w3id.org/def/vt#tieneAsistenciaYMantenimiento",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "teléfonoAsistencia" : {
+      "@id" : "https://w3id.org/def/vt#teléfonoAsistencia",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Gestor" : {
+      "@id" : "https://w3id.org/def/vt#Gestor"
+    },
+    "idiomaNotificaciones" : {
+      "@id" : "https://w3id.org/def/vt#idiomaNotificaciones",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "esGestionadaPor" : {
+      "@id" : "https://w3id.org/def/vt#esGestionadaPor",
+      "@type" : "@id"
+    },
+    "Título" : {
+      "@id" : "https://w3id.org/def/vt#Título"
+    },
+    "esRepresentante" : {
+      "@id" : "https://w3id.org/def/vt#esRepresentante",
+      "@type" : "@id"
+    },
+    "tienePropiedad" : {
+      "@id" : "https://w3id.org/def/vt#tienePropiedad",
+      "@type" : "@id"
+    },
+    "address" : {
+      "@id" : "http://schema.org/address"
+    },
+    "perteneceA" : {
+      "@id" : "https://w3id.org/def/vt#perteneceA",
+      "@type" : "@id"
+    },
+    "RepresentanteLegal" : {
+      "@id" : "https://w3id.org/def/vt#RepresentanteLegal"
+    },
+    "DocumentoIdentificación" : {
+      "@id" : "https://w3id.org/def/vt#DocumentoIdentificación"
+    },
+    "seIncluye" : {
+      "@id" : "https://w3id.org/def/vt#seIncluye",
+      "@type" : "@id"
+    },
+    "tieneNormativa" : {
+      "@id" : "https://w3id.org/def/vt#tieneNormativa",
+      "@type" : "@id"
+    },
+    "Explotación" : {
+      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#Explotación"
+    },
+    "Duration" : {
+      "@id" : "http://www.w3.org/2006/time#Duration"
+    },
+    "emailNotificaciones" : {
+      "@id" : "https://w3id.org/def/vt#emailNotificaciones",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vtfax" : {
+      "@id" : "https://w3id.org/def/vtfax",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tieneAguaCaliente" : {
+      "@id" : "https://w3id.org/def/vt#tieneAguaCaliente",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "vtTipoDocumento" : {
+      "@id" : "https://w3id.org/def/vtTipoDocumento"
+    },
+    "referenciaCatastral" : {
+      "@id" : "https://w3id.org/def/vt#referenciaCatastral",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "esPropietarioDe" : {
+      "@id" : "https://w3id.org/def/vt#esPropietarioDe",
+      "@type" : "@id"
+    },
+    "vtAdmónPública" : {
+      "@id" : "https://w3id.org/def/vtAdmónPública"
+    },
+    "vtrazónSocial" : {
+      "@id" : "https://w3id.org/def/vtrazónSocial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "dura" : {
+      "@id" : "https://w3id.org/def/vt#dura",
+      "@type" : "@id"
+    },
+    "notificaEn" : {
+      "@id" : "https://w3id.org/def/v#notificaEn",
+      "@type" : "@id"
+    },
+    "esSolicitada" : {
+      "@id" : "https://w3id.org/def/vt#esSolicitada",
+      "@type" : "@id"
+    },
+    "fechaTítulo" : {
+      "@id" : "https://w3id.org/def/vt#fechaTítulo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "esSolicitadaSobre" : {
+      "@id" : "https://w3id.org/def/v#esSolicitadaSobre",
+      "@type" : "@id"
+    },
+    "DirecciónPostal" : {
+      "@id" : "https://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#DirecciónPostal"
+    },
+    "esSolicitante" : {
+      "@id" : "https://w3id.org/def/vt#esSolicitante",
+      "@type" : "@id"
+    },
+    "solicitaExplotación" : {
+      "@id" : "https://w3id.org/def/vt#solicitaExplotación",
+      "@type" : "@id"
+    },
+    "esObjetoDeSolicitud" : {
+      "@id" : "https://w3id.org/def/vt#esObjetoDeSolicitud",
+      "@type" : "@id"
+    },
+    "tieneCalefacción" : {
+      "@id" : "https://w3id.org/def/vt#tieneCalefacción",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Representación" : {
+      "@id" : "https://w3id.org/def/vt#Representación"
+    },
+    "SerPropietario" : {
+      "@id" : "https://w3id.org/def/vt#SerPropietario"
+    },
+    "esExplotador" : {
+      "@id" : "https://w3id.org/def/vt#esExplotador",
+      "@type" : "@id"
+    },
+    "vtsolicita" : {
+      "@id" : "https://w3id.org/def/vtsolicita",
+      "@type" : "@id"
+    },
+    "vtdocumento" : {
+      "@id" : "https://w3id.org/def/vtdocumento",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vtApellidos" : {
+      "@id" : "https://w3id.org/def/vtApellidos",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tieneDirección" : {
+      "@id" : "https://w3id.org/def/vt#tieneDirección",
+      "@type" : "@id"
+    },
+    "móvilVivienda" : {
+      "@id" : "https://w3id.org/def/vt#móvilVivienda",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "motivo" : {
+      "@id" : "https://w3id.org/def/vt#motivo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "títuloNormativa" : {
+      "@id" : "https://w3id.org/def/vt#títuloNormativa",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "explota" : {
+      "@id" : "https://w3id.org/def/v#explota",
+      "@type" : "@id"
+    },
+    "páginaWeb" : {
+      "@id" : "https://w3id.org/def/vt#páginaWeb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "garantizaPropiedad" : {
+      "@id" : "https://w3id.org/def/vt#garantizaPropiedad",
+      "@type" : "@id"
+    },
+    "vtmóvil" : {
+      "@id" : "https://w3id.org/def/vtmóvil",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vtsolicitudArranqueActividad" : {
+      "@id" : "https://w3id.org/def/vtsolicitudArranqueActividad"
+    },
+    "fechaPoderNotarial" : {
+      "@id" : "https://w3id.org/def/vt#fechaPoderNotarial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "faxVivienda" : {
+      "@id" : "https://w3id.org/def/vt#faxVivienda",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Normativa" : {
+      "@id" : "https://w3id.org/def/vt#Normativa"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "identifica" : {
+      "@id" : "https://w3id.org/def/vt#identifica",
+      "@type" : "@id"
+    },
+    "telefonoVivienda" : {
+      "@id" : "https://w3id.org/def/vt#telefonoVivienda",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tienePoderNotarial" : {
+      "@id" : "https://w3id.org/def/vt#tienePoderNotarial",
+      "@type" : "@id"
+    }
+  }
+}
